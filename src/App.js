@@ -4,7 +4,7 @@ import Content from "./component/11-content";
 import InputBox from "./component/8-inputBox";
 import UseReducer from "./component/12-useReducer";
 import MyForm from "./component/customHookForm";
-import Resize from "./component/resize";
+import Resize from "./component/15-resize";
 import FormReducer from "./component/13-formReducer";
 import TranslationComponent from "./component/6-TranslationComponent";
 import UseRefHook from "./component/9-UseRefHook";
@@ -34,7 +34,7 @@ function App() {
 
         {/* <ThemeToggle /> 
         <Content />   */}
-        
+
         {/* <InputBox />  */}
         {/* <Resize /> */}
         {/* <MyForm /> */}
