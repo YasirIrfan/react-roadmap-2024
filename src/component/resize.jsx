@@ -1,4 +1,4 @@
-import { useWindowResize } from "./14-resizeHook";
+import { useWindowResize } from "./resizeHook";
 
 // Usage
 function Resize() {
