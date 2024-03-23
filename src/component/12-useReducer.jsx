@@ -40,7 +40,8 @@ const UseReducer = () => {
 
   return (
     <React.Fragment>
-      <button onClick={handleDecrement}>-</button>
+      {/* <button onClick={handleDecrement}>-</button> */}
+      <button onClick={()=> dispatch({type:ACTION.DECREMENT})}>-</button>
       <div>{state.count === 0 ? " " : state.count}</div>
       <button onClick={handleIncrement}>+</button>
       <button onClick={handleClear}>Clear</button>

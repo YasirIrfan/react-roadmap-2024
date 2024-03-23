@@ -11,7 +11,7 @@ import UseRefHook from "./component/9-UseRefHook";
 import CustomForm from "./component/1-customForm";
 import MyButton from "./component/2-composition";
 import Post from "./component/14-0-Post";
-import Form from "./component/Form";
+import Form from "./component/15-0-Form";
 import "./App.css";
 
 export const ThemeContext = React.createContext();
@@ -40,7 +40,7 @@ function App() {
         {/* <InputBox />  */}
         {/* <Resize /> */}
         {/* <MyForm /> */}
-        {/* <FormReducer /> */}
+        <FormReducer />
 
         {/* <TranslationComponent
           word="hello"
@@ -53,7 +53,7 @@ function App() {
         {/* <UseReducer /> */}
 
         {/* <Post/> */}
-        <Form/>
+        {/* <Form/> */}
 
       </div>
     </ThemeContext.Provider>
