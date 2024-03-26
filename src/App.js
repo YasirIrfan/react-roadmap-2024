@@ -14,6 +14,7 @@ import Post from "./component/14-0-Post";
 import Form from "./component/15-0-Form";
 import Navbar from "./component/16-Navbar";
 import useFetch from "./component/17-useFetch";
+import TodoApp from "./component/20-2-TodoApp";
 import "./App.css";
 
 export const ThemeContext = React.createContext();
@@ -86,6 +87,7 @@ function App() {
     <ThemeContext.Provider value={values}>
       <div className="App">
 
+      <TodoApp/>
 
         {/* 
         <>
@@ -119,12 +121,12 @@ function App() {
         <Content />   */}
 
         {/* <InputBox />  */}
-        <Resize />
+        {/* <Resize /> */}
         {/* <MyForm /> */}
         {/* <FormReducer /> */}
 
         {/* <TranslationComponent
-          word="hello"
+          word="hello"z
           fromLanguage="en"
           toLanguage="fr"
         /> */}
