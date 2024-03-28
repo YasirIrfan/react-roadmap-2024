@@ -12,10 +12,27 @@ import CustomForm from "./component/1-customForm";
 import MyButton from "./component/2-composition";
 import Post from "./component/14-0-Post";
 import Form from "./component/15-0-Form";
-import Navbar from "./component/16-Navbar";
+// import Navbar from "./component/16-Navbar";
 import useFetch from "./component/17-useFetch";
 import TodoApp from "./component/20-2-TodoApp";
 import "./App.css";
+import About from "./component/21-0-About";
+import Home from "./component/21-1-Home";
+import Login from "./component/21-2-Login";
+import Navbar from "./component/21-3-Navbar";
+import User from "./component/21-4-User";
+import NotFound from "./component/21-5-NotFound";
+import Filter from "./component/21-6-Filter";
+import Contact from "./component/21-10-Contact";
+import Company from "./component/21-7-Company";
+import Channel from "./component/21-8-Channel";
+import Other from "./component/21-9-Other";
+
+
+
+import { BrowserRouter, Router, Routes, Route, createBrowserRouter, RouterProvider, Navigate, useNavigate } from 'react-router-dom'
+import { renderIntoDocument } from "react-dom/test-utils";
+
 
 export const ThemeContext = React.createContext();
 
@@ -35,7 +52,7 @@ function App() {
   // const [data] = useFetch("https://jsonplaceholder.typicode.com/todos");
 
   //#endregion
-  
+
   //#region  useCallback Example
 
   // const [count, setCount] = useState(0)
@@ -83,11 +100,82 @@ function App() {
 
   //#endregion
 
+
+  //#region React Router Example using BrowserRouter
+
+
+
+  //#endregion
+
+  //#region React Router Example using createBrowserRouter 
+
+
+  // const router = createBrowserRouter([
+  //   {
+  //     path: "/",
+  //     element: <><Navbar /><Home /></>
+  //   },
+  //   {
+  //     path: "/login",
+  //     element: <><Navbar /><Login /></>
+  //   },
+  //   {
+  //     path: "/about",
+  //     element: <><Navbar /><About /></>
+  //   },
+  //   {
+  //     path: "/user/:username",
+  //     element: <><Navbar /><User /></>
+  //   },
+  //   {
+  //     path: "/Filter",
+  //     element: <> <Navbar /><Filter/> </>
+  //   },
+  //   {
+  //     path: "/Contact",
+  //     element: <> <Navbar /><Contact/> </>
+  //   },
+  //   {
+  //     path: "/*",
+  //     element: <> <Navbar /> <NotFound/></>
+  //   }
+  //   // { 
+  //   //   path: "/*",
+  //   //   element: <> <Navbar /> {<Navigate to="/" />}</>
+  //   // }
+  //   // {
+  //   //   path: "/*",
+  //   //   element: <>{<h1>Not Found</h1>}</>
+  //   // }
+  // ])
+
+  //#endregion React Router Example using createBrowserRouter 
+
+
   return (
     <ThemeContext.Provider value={values}>
       <div className="App">
 
-      <TodoApp/>
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/Login" element={<Login />} />
+            <Route path="/About" element={<About />} />
+            <Route path="/user/:username" element={<User />} />
+            <Route path="/Filter" element={<Filter />} />
+            <Route path="/*" element={<NotFound />} />
+            <Route path="/Contact/" element={<Contact />} >
+              <Route path="Company" element={<Company/>} />
+              <Route path="Channel" element={<Channel />} />
+              <Route path="Other" element={<Other />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+
+        {/* <RouterProvider router={router} /> */}
+
+        {/* <TodoApp/> */}
 
         {/* 
         <>
